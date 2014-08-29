@@ -1,0 +1,34 @@
+~~ GRADE DA ENGENHARIA FÍSICA ~~
+Autor: Rafael Joseph Pagliuca dos Santos
+
+=====================
+
+REQUISITOS
+
+- Git:
+    $ sudo apt-get install git
+
+- Composer (getcomposer.org):
+    - instalar na raiz do projeto
+    $ curl -sS https://getcomposer.org/installer | php
+
+- Dependências de composer.json
+    - Nota de 2014-02-20: a dependência ivaynberg/select2 ainda não possui sistema de tags do composer. A última versão no github é a 3.4.5 (git #06738562eb22504f5cd7f31e56de7cf81809955c).
+=====================
+
+DEPLOY
+
+- Executar script de deploy:
+    $ ./deploy.sh
+
+=====================
+
+EXTRA PARA NOVAS INSTALAÇÕES
+
+- Importar os dados do ProgradWeb:
+    $ php app/console grade:nexos:sync 
+
+- Calcular e criar cache em banco dos pré-requisitos:
+    $ php app/console grade:disciplina:calcular-dependencias
+
+- Instalar manualmente o app_dev.php da versão correspondente do Symfony (apenas para testes)
