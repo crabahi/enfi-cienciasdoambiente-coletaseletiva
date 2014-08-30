@@ -17,8 +17,14 @@ echo '*** updating git repo' && \
 git pull && \
 echo '*** composer install' && \
 php composer.phar -vvv install && \
-echo '*** symbolic linking web/components' && \
+echo '*** loading node from nvm' && \
+source ~/.nvm/nvm.sh && \
+echo '*** npm install' && \
+npm install && \
+echo '*** linking components' && \
 ln -f -s -n ../components web/components && \
+echo '*** linking components_manual' && \
+ln -f -s -n ../components_manual web/components_manual && \
 echo '*** clearing prod cache' && \
 php app/console cache:clear --env=prod && \
 echo '*** assetic dump' && \
@@ -30,3 +36,5 @@ sf doctrine:schema:update --dump-sql && \
 echo '*** disabling "Modo de manutenção"' && \
 mv web/app_bkp_maintenance.php web/app.php && \
 echo '*** success!'
+
+

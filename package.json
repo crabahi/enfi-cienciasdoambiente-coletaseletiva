@@ -1,0 +1,21 @@
+{
+  "name": "EnfiCienciasDoAmbienteColetaSeletiva",
+  "version": "0.0.0",
+  "description": " ",
+  "main": "/",
+  "dependencies": {
+    "less": "~1.6.3",
+    "uglify-js": "~2.4.12",
+    "uglifycss": "0.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpagliuca/enfi-cienciasdoambiente-coletaseletiva"
+  },
+  "author": "",
+  "license": ""
+}
