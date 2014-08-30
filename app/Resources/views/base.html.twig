@@ -22,9 +22,11 @@
 
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block head %}{% endblock head %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}{% endblock body %}
         {% javascripts
             'js/jquery.js'
             'components/jquery-ui/ui/jquery-ui.js'

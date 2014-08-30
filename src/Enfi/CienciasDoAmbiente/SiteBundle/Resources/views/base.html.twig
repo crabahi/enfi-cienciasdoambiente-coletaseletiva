@@ -1,0 +1,28 @@
+{% extends("::base.html.twig") %}
+
+{% block body %}
+
+<div class="container">
+
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="{{ path('home') }}">Início</a></li>
+          <li><a href="{{ path('map') }}">Pontos de Coleta</a></li>
+          {% if is_granted('ROLE_USER') %}
+          <li><a href="{{ path('logout') }}">Sair</a></li>
+          {% else %}
+          <li><a href="{{ url("hwi_oauth_service_redirect", {service: "facebook"}) }}">Entrar via Facebook</a></li>
+          {% endif %}
+        </ul>
+        <h3 class="text-muted">UFSCar - Ciências do Ambiente para a Engenharia Física</h3>
+      </div>
+
+{% block content %}{% endblock content %}
+
+      <div class="footer">
+        <p>&copy; Rafael Santos 2014</p>
+      </div>
+
+    </div> <!-- /container -->
+
+{% endblock body %} 

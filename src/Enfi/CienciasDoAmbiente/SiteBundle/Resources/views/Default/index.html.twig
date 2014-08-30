@@ -1,21 +1,10 @@
-{% extends("::base.html.twig") %}
-{% block body %}
+{% extends("EnfiCienciasDoAmbienteSiteBundle::base.html.twig") %}
 
-<div class="container">
-
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-        <h3 class="text-muted">UFSCar - Ciências do Ambiente para a Engenharia Física</h3>
-      </div>
-
+{% block content %}
       <div class="jumbotron">
         <h1>Coleta Seletiva</h1>
         <p class="lead">O jeito fácil de descartar as coisas que você não usa mais!</p>
-        <p><a class="btn btn-lg btn-success" href="{{ path('user') }}" role="button">Encontre o ponto de coleta mais próximo!</a></p>
+        <p><a class="btn btn-lg btn-success" href="{{ path('map') }}" role="button">Encontre o ponto de coleta mais próximo!</a></p>
       </div>
 
       <div class="row marketing">
@@ -36,10 +25,4 @@
         </div>
       </div>
 
-      <div class="footer">
-        <p>&copy; Rafael Santos 2014</p>
-      </div>
-
-    </div> <!-- /container -->
-
-{% endblock body %} 
+{% endblock content %}
