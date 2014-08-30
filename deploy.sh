@@ -16,7 +16,7 @@ fi
 echo '*** updating git repo' && \
 git pull && \
 echo '*** composer install' && \
-php composer.phar install && \
+php composer.phar -vvv install && \
 echo '*** symbolic linking web/components' && \
 ln -f -s -n ../components web/components && \
 echo '*** clearing prod cache' && \

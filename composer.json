@@ -50,7 +50,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "extra": {
         "symfony-assets-install": "symlink",
         "symfony-app-dir": "app",
