@@ -1,3 +1,14 @@
+# HWIOAuthBundle
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
+hwi_oauth_login:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix:   /login
+facebook_login:
+    pattern: /login/check-facebook
+
+# Custom
 enfi_ciencias_do_ambiente_site:
     resource: "@EnfiCienciasDoAmbienteSiteBundle/Controller/"
     type:     annotation

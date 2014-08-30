@@ -3,6 +3,10 @@ parameters:
     node_binary: /home/coletaseletiva/.nvm/v0.10.31/bin/node
     node_modules_paths:
         - '%kernel.root_dir%/../node_modules'
+
+    facebook_app_client_id:           999999_app_id
+    facebook_app_client_secret:       999999_secret
+
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~

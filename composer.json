@@ -43,7 +43,8 @@
         "knplabs/knp-paginator-bundle": "~2.4",
         "simplethings/entity-audit-bundle": "0.5.*",
         "ircmaxell/password-compat": "1.0.*",
-        "eternicode/bootstrap-datepicker": "1.3.*"
+        "eternicode/bootstrap-datepicker": "1.3.*",
+        "hwi/oauth-bundle": "0.4.*@dev"
     },
     "scripts": {
         "post-install-cmd": [

@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new Padam87\SearchBundle\Padam87SearchBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
