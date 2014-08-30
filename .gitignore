@@ -41,6 +41,7 @@ node_modules/
 components/*
 web/js
 web/fonts
+web/stats
 
 *html_template*
 ~                
