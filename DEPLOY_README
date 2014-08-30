@@ -7,6 +7,7 @@ Configurar node_binary e node_modules_paths seguindo o exemplo abaixo:
     node_binary: /home/rafael/.nvm/v0.10.24/bin/node
     node_modules_paths:
         - '%kernel.root_dir%/../node_modules'
+    OBS: Tive que rodar npm install --global less pra funcionar
 
 
 =====================

@@ -21,6 +21,7 @@ echo '*** loading node from nvm' && \
 source ~/.nvm/nvm.sh && \
 echo '*** npm install' && \
 npm install && \
+node -e 'require("less")' &&\
 echo '*** linking components' && \
 ln -f -s -n ../components web/components && \
 echo '*** linking components_manual' && \
