@@ -13,3 +13,7 @@ enfi_ciencias_do_ambiente_site:
     resource: "@EnfiCienciasDoAmbienteSiteBundle/Controller/"
     type:     annotation
     prefix:   /
+
+# Security
+logout:
+    path: /logout
