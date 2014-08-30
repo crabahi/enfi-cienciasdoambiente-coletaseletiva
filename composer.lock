@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7125b2fb8a649f72c8bec301c5073b1f",
+    "hash": "716cabe862757ef216790f4ac3aeeacd",
     "packages": [
         {
             "name": "braincrafted/bootstrap-bundle",
@@ -1159,6 +1159,17 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
+        },
+        {
+            "name": "jquery/jquery",
+            "version": "1.10.2",
+            "dist": {
+                "type": "file",
+                "url": "http://code.jquery.com/jquery-1.10.2.js",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
         },
         {
             "name": "knplabs/knp-components",
