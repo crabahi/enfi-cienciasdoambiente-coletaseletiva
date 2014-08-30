@@ -16,4 +16,13 @@ class DefaultController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Route("/user")
+     * @Template()
+     */
+    public function userAction()
+    {
+        return array();
+    }
 }

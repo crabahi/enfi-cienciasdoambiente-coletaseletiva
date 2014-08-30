@@ -99,7 +99,7 @@ hwi_oauth:
     # here you will add one (or more) configurations for resource owners
     # and other settings you want to adjust in this bundle, just checkout the list below! 
     resource_owners:
-        any_name:
+        facebook:
             type:                facebook
             client_id:           "%facebook_app_client_id%"
             client_secret:       "%facebook_app_client_secret%"
