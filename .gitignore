@@ -21,6 +21,9 @@ web/uploads/*
 web/bundles/*
 web/php54.cgi
 web/css
+web/.htaccess
+web/app.php
+web/app_dev.php
 
 # Configuration files
 app/config/parameters.ini
