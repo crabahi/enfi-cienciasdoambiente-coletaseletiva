@@ -1,3 +1,8 @@
+enfi_ciencias_do_ambiente_common_entities:
+    resource: "@EnfiCienciasDoAmbienteCommonEntitiesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 # HWIOAuthBundle
 hwi_oauth_redirect:
     resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"

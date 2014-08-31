@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new Enfi\CienciasDoAmbiente\CommonEntitiesBundle\EnfiCienciasDoAmbienteCommonEntitiesBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
