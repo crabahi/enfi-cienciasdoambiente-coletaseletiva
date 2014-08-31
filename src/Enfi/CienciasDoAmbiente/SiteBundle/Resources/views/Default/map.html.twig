@@ -12,6 +12,7 @@
     </script>
 
     <script type="text/javascript">
+/*
     function initialize() {
       var mapOptions = {
         center: new google.maps.LatLng(-21.984, -47.881),
@@ -19,20 +20,75 @@
       };
       var map = new google.maps.Map(document.getElementById("map-canvas"),
           mapOptions);
-      google.maps.event.addListener(map, 'click', function(event) {
-          placeMarker(map, event.latLng);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+*/
+    var customIcons = {
+      restaurant: {
+        icon: 'http://www.beatthetraffic.com/img/trash_icon_solo_rectangular.png'
+      },
+      bar: {
+        icon: 'http://www.minininha_maluka.blogger.com.br/celjuu.gif'
+      }
+    };
+
+    function initialize() {
+      var map = new google.maps.Map(document.getElementById("map-canvas"), {
+        center: new google.maps.LatLng(-21.984, -47.881),
+        zoom: 15,
+        mapTypeId: 'roadmap'
+      });
+      var infoWindow = new google.maps.InfoWindow;
+
+      // Change this depending on the name of your PHP file
+      downloadUrl("/phpsqlajax_genxml.php", function(data) {
+        var xml = data.responseXML;
+        var markers = xml.documentElement.getElementsByTagName("marker");
+        for (var i = 0; i < markers.length; i++) {
+          var name = markers[i].getAttribute("name");
+          var address = markers[i].getAttribute("address");
+          var type = markers[i].getAttribute("type");
+          var point = new google.maps.LatLng(
+              parseFloat(markers[i].getAttribute("lat")),
+              parseFloat(markers[i].getAttribute("lng")));
+          var html = "<b>" + name + "</b> <br/>" + address;
+          var icon = customIcons[type] || {};
+          var marker = new google.maps.Marker({
+            map: map,
+            position: point,
+            icon: icon.icon
+          });
+          bindInfoWindow(marker, map, infoWindow, html);
+        }
       });
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 
-    function placeMarker(map, location) {
-      var marker = new google.maps.Marker({
-          position: location, 
-          map: map
+    function bindInfoWindow(marker, map, infoWindow, html) {
+      google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(html);
+        infoWindow.open(map, marker);
       });
-
-      //map.setCenter(location);
     }
+
+    function downloadUrl(url, callback) {
+      var request = window.ActiveXObject ?
+          new ActiveXObject('Microsoft.XMLHTTP') :
+          new XMLHttpRequest;
+
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          request.onreadystatechange = doNothing;
+          callback(request, request.status);
+        }
+      };
+
+      request.overrideMimeType('text/xml');
+      request.open('GET', url, true);
+      request.send(null);
+    }
+
+    function doNothing() {}
 
     </script>
 
