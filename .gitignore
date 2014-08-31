@@ -20,7 +20,6 @@ vendor/*
 web/uploads/*
 web/bundles/*
 web/php54.cgi
-web/.htaccess
 web/css
 
 # Configuration files
