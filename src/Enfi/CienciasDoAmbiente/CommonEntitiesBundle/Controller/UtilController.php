@@ -11,7 +11,7 @@ class UtilController extends Controller
     /**
      * @Template()
      */
-    public function gitVersionAction($name)
+    public function gitVersionAction()
     {
         $git_version = 'git-test-hash';
         return array('git_version' => $git_version);
