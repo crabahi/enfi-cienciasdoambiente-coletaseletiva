@@ -15,6 +15,8 @@ fi
 # A partir de agora, tem que tudo dar certo para sair do modo de manutenção
 echo '*** updating git repo' && \
 git pull && \
+echo '*** writing commit hash to git-current-commit.txt' && \
+git rev-parse HEAD > git-current-commit.txt && \
 echo '*** composer install' && \
 php composer.phar -vvv install && \
 echo '*** loading node from nvm' && \

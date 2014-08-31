@@ -26,6 +26,7 @@ web/app.php
 web/app_dev.php
 web/github_hook*
 github_hook*
+git-current-commit.txt
 
 # Configuration files
 app/config/parameters.ini
