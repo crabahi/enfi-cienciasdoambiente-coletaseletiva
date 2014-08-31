@@ -33,7 +33,7 @@ php app/console assetic:dump --env=prod && \
 echo '*** assets install' && \
 php app/console assets:install web --symlink --relative && \
 echo '*** migrações que devem ser feitas no banco de dados' && \
-sf doctrine:schema:update --dump-sql && \
+php app/console doctrine:schema:update --dump-sql && \
 echo '*** disabling "Modo de manutenção"' && \
 mv web/app_bkp_maintenance.php web/app.php && \
 echo '*** success!'
