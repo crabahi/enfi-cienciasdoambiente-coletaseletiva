@@ -14,11 +14,7 @@ class UtilController extends Controller
      */
     public function gitVersionAction()
     {
-        $finder = new Finder();
-        $finder->files()->in(__DIR__)->name('git-current-commit.txt');
-        foreach ($finder as $file) {
-                $git_version = $file->getContents();
-        }
+        $git_version = file_get_contents($this->container->getParameter('kernel.root_dir') . '/../git-current-commit.txt');
         return array('git_version' => $git_version);
     }
 }
