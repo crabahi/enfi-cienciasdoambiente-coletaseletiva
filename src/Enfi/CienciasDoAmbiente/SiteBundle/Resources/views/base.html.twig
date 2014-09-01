@@ -1,6 +1,13 @@
 {% extends("::base.html.twig") %}
 
 {% block stylesheets %}
+<style>
+.footer {
+    font-size: 90%;
+    color: gray;
+    margin-top: 20px;
+}
+</style>
 {% endblock stylesheets %}
 
 {% block body %}
@@ -23,7 +30,7 @@
 {% block content %}{% endblock content %}
 
       <div class="footer">
-        <p>&copy; Rafael Santos, 2014</p>
+        <p>&copy; Cesar Rabahi, Diego Costa, Fernando Tateno, Filipe Hori, Rafael Santos. 2014</p>
         {{ render(controller('EnfiCienciasDoAmbienteCommonEntitiesBundle:Util:gitVersion')) }}
       </div>
 
