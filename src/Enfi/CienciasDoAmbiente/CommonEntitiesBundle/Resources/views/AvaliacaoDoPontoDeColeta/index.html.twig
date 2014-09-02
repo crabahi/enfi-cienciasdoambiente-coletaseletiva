@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>AvaliacaoDoPontoDeColeta list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Pontodecoletaid</th>
+                <th>Usuarioid</th>
+                <th>Timestamp</th>
+                <th>Comentario</th>
+                <th>Nota</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('manage_avaliacaodopontodecoleta_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.pontoDeColetaId }}</td>
+                <td>{{ entity.usuarioId }}</td>
+                <td>{{ entity.timestamp }}</td>
+                <td>{{ entity.comentario }}</td>
+                <td>{{ entity.nota }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('manage_avaliacaodopontodecoleta_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('manage_avaliacaodopontodecoleta_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('manage_avaliacaodopontodecoleta_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
