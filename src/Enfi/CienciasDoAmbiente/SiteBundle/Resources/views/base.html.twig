@@ -19,7 +19,8 @@
           <li><a href="{{ path('_home') }}">Início</a></li>
           <li><a href="{{ path('_map') }}">Pontos de Coleta</a></li>
           {% if is_granted('ROLE_USER') %}
-          <li><a href="{{ path('_logout') }}">Sair</a></li>
+          <li><a href="{{ path('_user') }}">Área restrita</a></li>
+          <li><a href="{{ path('_logout') }}">Desconectar</a></li>
           {% else %}
           <li><a href="{{ url("hwi_oauth_service_redirect", {service: "facebook", destination: "_user"}) }}">Entrar via Facebook</a></li>
           {% endif %}
