@@ -20,5 +20,5 @@ enfi_ciencias_do_ambiente_site:
     prefix:   /
 
 # Security
-logout:
+_logout:
     path: /logout

@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="_home")
      * @Template()
      */
     public function indexAction()
@@ -18,7 +18,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/user", name="user")
+     * @Route("/user", name="_user")
      * @Template()
      */
     public function userAction()
@@ -27,7 +27,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/map", name="map")
+     * @Route("/map", name="_map")
      * @Template()
      */
     public function mapAction()

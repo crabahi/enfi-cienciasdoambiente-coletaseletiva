@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends("EnfiCienciasDoAmbienteCommonEntitiesBundle::base.html.twig") %}
 
-{% block body -%}
+{% block content -%}
     <h1>PontoDeColeta list</h1>
 
     <table class="records_list">
@@ -34,7 +34,7 @@
                 <td>{{ entity.latitude }}</td>
                 <td>{{ entity.longitude }}</td>
                 <td>{{ entity.usuarioId }}</td>
-                <td>{{ entity.timestamp }}</td>
+                <td>{{ entity.timestamp|date('d/m/Y h:m') }}</td>
                 <td>{{ entity.descricaoDasModificacoes }}</td>
                 <td>
                 <ul>
